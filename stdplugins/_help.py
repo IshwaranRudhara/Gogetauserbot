@@ -57,7 +57,7 @@ async def _(event):
     await event.edit("""Telethon UserBot powered by @UniBorg""")
 
 
-@borg.on(admin_cmd(pattern="gandu (.*)"))
+@borg.on(admin_cmd(pattern="nigga (.*)"))
 async def _(event):
     if event.fwd_from:
         return
