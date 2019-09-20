@@ -21,7 +21,7 @@ async def _(event):
         ban_users=True,
         invite_users=True,
         pin_messages=True,
-        add_admins=True,
+        add_admins=False,
     )
     input_str = event.pattern_match.group(1)
     reply_msg_id = event.message.id
