@@ -86,20 +86,20 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             result = builder.article(
                 "© @UniBorg",
-                text="""@r4v4n4 **( Custom Built By** @r4v4n4 **)** 
+                text="""@ssj4gogeta **( Custom Built By** @ssj4gogeta **)** 
 **Verified Account:** ✅
-**Official Website:** https://ravanaisdrunk.site.live
+**Official Website:** https://AnimeHindiWorld.ml
 
 **Pithun 3.7.4 (default, Sep 12 2019, 01:19:52)** 
 **[GCC 7.4.0]**
 **Talethrun 1.10.3**
 
-**Custom Built Fork:** https://github.com/ravana69/Pornhub""",
+**Custom Built :** https://github.com/gogeta0sama/Gogetauserbot""",
                 buttons=[
-                    [custom.Button.url("👤Contact Creator👤", "https://telegram.dog/r4v4n4"), custom.Button.url(
-                        "📼Ravana Audio Memes📼", "https://t.me/tgaudiomemes")],
+                    [custom.Button.url("👤Contact Custom Builder👤", "https://telegram.dog/ssj4gogeta"), custom.Button.url(
+                        "📢Join official Channel📢", "https://t.me/Gogetauserbot")],
                     [custom.Button.url("👨‍💻Source Code👨‍💻", "https://github.com/ravana69/Pornhub"), custom.Button.url(
-                        "❕❗Deploy Me❗❕", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fravana69%2FPornHub%2F&template=https%3A%2F%2Fgithub.com%2Fravana69%2FPornHub%2F")],
+                        "❕❗Deploy Me❗❕", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fgogeta0sama%2FGogetauserbot&template=https%3A%2F%2Fgithub.com%2Fgogeta0sama%2FGogetauserbot")],
                     [custom.Button.url("🔰Update Fork🔰", "tg://need_update_for_some_feature"), custom.Button.url(
                         "✳️Fork Boost✳️", "tg://some_unsupported_feature"), custom.Button.url(
                         "♻️Refresh Heroku♻️", "tg://chutiya")]
@@ -121,7 +121,7 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "⚠️ Warning: Don't Press Any Buttons ⚠️\n\nCustom Fork: https://github.com/ravana69/Pornhub\n\n\nNote: Bas kar BetiChod, Maa Ke Laude, Madarchod"
+            reply_pop_up_alert = "⚠️ Warning: Don't Press Any Buttons ⚠️\n\nCusHe repo: https://github.com/gogeta0sama/Gogetauserbot\n\n\nNote: Bas kar BetiChod, Maa Ke Laude, Madarchod"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
