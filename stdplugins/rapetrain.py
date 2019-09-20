@@ -4,7 +4,7 @@ Available Commands:
 
 .repe
 
-build by legend @r4v4n4 , if u edit it then u r gay..."""
+ plugin by @r4v4n4..."""
 
 from telethon import events
 
