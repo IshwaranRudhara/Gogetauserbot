@@ -1,9 +1,7 @@
 """Lydia AI plugin for @UniBorg
-
 .eai <as a reply to user's message //Turns AI on For that user.
 .dai <as a reply to user's message //Turns AI off For that user.
 .lai // Outputs List Of Currently added Users in AI Auto-Chat.
-
 Description: A module that Act as a chatbot and chat with a User/other Bot.
 This Module Needs CoffeeHouse API to work. so Join https://telegram.dog/IntellivoidDev and send #activateapi and follow instructions.
 This Module also Needs DB_URI For Storage of Some Data So make sure you have that too.
@@ -44,7 +42,7 @@ async def lydia_disable_enable(event):
             await event.edit(f"hmm")
         elif input_str == "d":
             logger.info(remove_s(user_id, chat_id))
-            await event.edit(f"[🥺 Bye , have to go...](tg://user?id={user_id})")
+            await event.edit(f"[__**signal lost**__](tg://user?id={user_id})")
         elif input_str == "l":
             lsts = get_all_s()
             if len(lsts) > 0:
@@ -55,7 +53,7 @@ async def lydia_disable_enable(event):
                 output_str = "no Lydia AI enabled users / chats. Start by replying `.enacf` to any user in any chat!"
             if len(output_str) > Config.MAX_MESSAGE_SIZE_LIMIT:
                 with io.BytesIO(str.encode(output_str)) as out_file:
-                    out_file.name = "lydia_ai.text"
+                    out_file.name = "@r4v4n4_lydia_ai.text"
                     await borg.send_file(
                         event.chat_id,
                         out_file,
@@ -98,9 +96,9 @@ async def on_new_message(event):
                 logger.info(add_s(user_id, chat_id, session_id, session_expires))
             # Try to think a thought.
             try:
-                async with event.client.action(event.chat_id, "typing"):
-                    await asyncio.sleep(1)
+                async with event.client.action(event.chat_id, "round"):
+                    await asyncio.sleep(0.1)
                     output = api_client.think_thought(session_id, query)
-                    await event.reply(output)
+                    await event.reply ("🤖: " +output)
             except cf.exception.CoffeeHouseError as e:
                 logger.info(str(e))
