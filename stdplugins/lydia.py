@@ -12,6 +12,7 @@ import coffeehouse as cf
 
 import asyncio
 import io
+import random
 from sql_helpers.lydia_ai_sql import get_s, get_all_s, add_s, remove_s
 from time import time
 from uniborg.util import admin_cmd
@@ -34,12 +35,12 @@ async def lydia_disable_enable(event):
         reply_msg = await event.get_reply_message()
         user_id = reply_msg.from_id
         chat_id = event.chat_id
-        await event.edit("hm")
+        await event.edit("ho")
         if input_str == "e":
             session = api_client.create_session()
             logger.info(session)
             logger.info(add_s(user_id, chat_id, session.id, session.expires))
-            await event.edit(f"hmm")
+            await event.edit(f"hi")
         elif input_str == "d":
             logger.info(remove_s(user_id, chat_id))
             await event.edit(f"[__**signal lost**__](tg://user?id={user_id})")
@@ -96,9 +97,9 @@ async def on_new_message(event):
                 logger.info(add_s(user_id, chat_id, session_id, session_expires))
             # Try to think a thought.
             try:
-                async with event.client.action(event.chat_id, "round"):
-                    await asyncio.sleep(0.1)
+                async with event.client.action(event.chat_id, "typing"):
+                    await asyncio.sleep(random.randint(0, 6))
                     output = api_client.think_thought(session_id, query)
-                    await event.reply ("🤖: " +output)
+                    await event.reply ("🤖: " +output+ "                                                                                                  I♥️U")
             except cf.exception.CoffeeHouseError as e:
                 logger.info(str(e))
